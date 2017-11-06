@@ -1,0 +1,494 @@
+/*--------------------------------------------------------------------------
+	1. Body
+--------------------------------------------------------------------------*/
+
+html {
+}
+
+
+body {
+	color: #111;
+	font-size: 18px;
+	line-height: 36px;
+	font-family: 'Lato', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400; 
+	-webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		font-size: 13px;
+		line-height: 23px;
+	}
+}
+
+
+
+/*--------------------------------------------------------------------------
+	2. Typography
+--------------------------------------------------------------------------*/
+
+/* Links */
+a {
+	color: #ff5544;
+	text-decoration: none;
+	outline: 0;
+}
+
+a:hover,
+a:focus {
+	color: #ee4433;
+}
+/* Visibility */
+.hide {
+	display: none !important;
+}
+/* Highlighted Text */
+::selection {
+	background: #222;
+	color: #ff5544;
+	text-shadow: none;
+}
+/* Firefox */
+::-moz-selection {
+	background: #222;
+	color: #ff5544;
+	text-shadow: none;
+}
+
+em,
+.italic {
+	font-style: italic;
+}
+
+strong,
+.bold {
+	font-weight: bold;
+}
+/* Colors */
+.font-color-primary {
+	color: #ff5544;
+}
+
+.font-color-secondary {
+	color: #ff3e2a;
+}
+
+.background-color-primary {
+	background: #ff5544;
+}
+
+.font-color-white {
+	color: #fff;
+}
+
+.background-color-white {
+	background: #fff;
+}
+
+.font-color-red {
+	color: #ff5544;
+}
+
+.highlight-violet, 
+.highlight-red, 
+.highlight-turquoise {
+	display: inline-block; 
+	position: relative;
+	bottom: 5px; 
+	color: #fff; 
+	font-size: 12px; 
+	line-height: 22px; 
+	font-weight: bold; 
+	text-transform: uppercase; 
+	letter-spacing: 2px; 
+	padding: 6px 12px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; /* future proofing */
+	-khtml-border-radius: 3px; /* for old Konqueror browsers */
+}
+
+.highlight-violet {
+	background: #c636ea;
+}
+
+.highlight-red {
+	background: #ff5544; 
+}
+
+.highlight-turquoise {
+	background: #22ddcc;
+}
+
+
+/*--------------------------------------------------------------------------
+	3. Page Sections
+--------------------------------------------------------------------------*/
+
+h3 {
+	margin-bottom: 20px; 
+}
+
+p.intro {
+	color: #333;
+	margin-top: 20px; 
+	margin-bottom: 20px;
+}
+
+p.button-wrapper {
+	text-align: center; 
+}
+
+a.button {
+	display: inline-block;
+	font-weight: normal; 
+	color: #fff;
+	background: #ff5544;
+	padding: 27px 60px 25px 60px;
+	border: none; 
+	border-bottom: 5px solid #ee4433;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; /* future proofing */
+	-khtml-border-radius: 5px; /* for old Konqueror browsers */
+}
+
+a.button.check {
+	background: #ee4433 url('../images/icon_check.png') no-repeat 40px center;
+	padding: 27px 60px 25px 110px; 
+}
+
+a.button.red {
+	background: #ff5544;
+	border-color: #cc3322;
+}
+
+	a.button.red:hover {
+		background-color: #ee4433;
+	}
+	
+
+a.button.small {
+	font-size: 13px;
+	line-height: 23px;
+	padding: 15px 25px 12px 25px;
+	border-bottom-width: 3px;
+	margin-right: 20px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; /* future proofing */
+	-khtml-border-radius: 3px; /* for old Konqueror browsers */
+}
+
+	a.button:hover {
+		background-color: #ee4433;
+	}
+
+span.underline {
+	display: inline-block;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #eee; 
+}
+
+
+
+	/*--------------------------------------------------------------------
+		3.1. Main Page
+	--------------------------------------------------------------------*/
+
+	section#header {
+		padding: 60px 0 40px 0; 
+	}
+
+		section#header h1 {
+			color: #ddd; 
+			font-weight: bold; 
+		}
+
+
+	/*--------------------------------------------------------------------
+		3.1. Main Page
+	--------------------------------------------------------------------*/
+
+	form#id-wrapper {
+
+	}
+
+		form#id-wrapper label {
+			color: #333; 
+			font-size: 15px; 
+			line-height: 24px; 
+			margin: 60px 0 20px 0; 
+			display: block; 
+		}
+
+		form#id-wrapper input[type=text] {
+			color: #333; 
+			font-size: 26px; 
+			line-height: 35px; 
+			padding: 20px 30px; 
+			border: 1px solid #333; 
+			width: 100%; 
+			outline: none; 
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+		}
+
+			form#id-wrapper input[type=text]:focus {
+				color: #ff5544; 
+				border-color: #ff5544;
+			}
+
+
+
+		form#id-wrapper input[type=submit] {
+			display: block;
+			font-weight: normal; 
+			color: #fff;
+			background: #ff5544;
+			width: 100%; 
+			padding: 25px 30px; 
+			cursor: pointer; 
+			border: none; 
+			border-bottom: 5px solid #ee4433;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px; /* future proofing */
+			-khtml-border-radius: 5px; /* for old Konqueror browsers */
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+		}
+
+			form#id-wrapper input[type=submit]:hover {
+				background: #ee4433;
+			}
+
+
+
+	/*--------------------------------------------------------------------
+		3.1. Main Page
+	--------------------------------------------------------------------*/
+
+	a.nav {
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+		a.nav span.underline {
+			border-color: #ff5544;
+		}
+
+		a.nav:hover span.underline {
+			border-color: #ee4433; 
+		}
+
+
+	#status,
+	#recording-blink {
+		font-size: 30px;
+		line-height: 48px; 
+		font-weight: 300; 
+	}
+
+	#recording-blink {
+		color: #ff5544; 
+		display: none; 
+	}
+
+	form#confirmation-wrapper {
+		display: none;
+		padding-top: 20px; 
+	}
+
+		form#confirmation-wrapper.show {
+			display: block; 
+		}
+		
+		form#confirmation-wrapper label {
+			display: block;
+			color: #aaa; 
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: bold; 
+		}
+
+		input#confirmation {
+			font-size: 24px; 
+			line-height: 36px;  
+			font-weight: 300; 
+			color: #ff5544; 
+			padding-bottom: 10px; 
+			border: none;
+			border-bottom: 1px solid #111;  
+			width: 100%; 
+			outline-color: #eee; 
+		}
+
+
+
+	/*--------------------------------------------------------------------
+		3.2. Recording Page
+	--------------------------------------------------------------------*/
+
+	span.label {
+		display: inline-block; 
+		font-size: 14px;
+		line-height: 23px;
+		border-bottom: 1px solid #eee; 
+	}
+
+	#box-review {
+		margin-bottom: 50px; 
+	}
+
+		#box-review h3 {
+			border-top: 1px solid #111; 
+			padding-top: 30px; 
+		}
+
+		#box-review p.intro {
+			margin-top: 0; 
+			margin-bottom: 20px; 
+		}
+
+	#box-record {
+		
+	}
+
+		#box-review h3,
+		#box-record h3 {
+			font-size: 16px;
+			line-height: 25px;
+			color: #333; 
+		}
+
+
+	#control_panel { 
+		color: #333; 
+		margin-top: 40px; 
+	}
+
+		#control_panel a { 
+			outline: none; 
+		}
+		
+			#control_panel a#record_button {
+			}
+
+			#control_panel a#record_button:hover {
+			}
+			
+		#control_panel a img { 
+			display: block;
+		}
+		
+		#save_button { 
+			padding: 0; 
+			margin: 0; 
+			background: transparent !important;
+		}
+		
+		#play_button { 
+			display: inline-block; 
+		}
+	
+
+	#timeCount.active {
+		color: #c636ea; 
+	}
+
+		#timeCount.active span.label {
+			color: #c636ea; 
+			border-color: #c636ea; 
+		}
+
+
+	/* Recording Information */
+
+	#recording-info {
+		color: #111; 
+		font-size: 20px;
+		line-height: 32px; 
+		margin-top: 50px; 
+		margin-bottom: 100px; 
+	}
+
+		#recording-info span.label {
+			border-color: #111;
+			margin-bottom: 10px; 
+		}
+
+		#activity_level {
+			display: none; 
+		}
+
+
+	#nav {
+		margin: 100px 0; 
+	}
+
+
+
+
+/*--------------------------------------------------------------------------
+	5. File List
+--------------------------------------------------------------------------*/
+
+#box-filelist {
+	font-size: 13px;
+	line-height: 24px; 
+}
+
+	#box-filelist h3 {
+		color: #444; 
+		font-size: 30px;
+		line-height: 42px;
+		font-weight: bold; 
+		text-transform: uppercase; 
+		letter-spacing: 4px;
+		padding-bottom: 10px; 
+		border-bottom: 1px solid #222;  
+		margin-bottom: 10px; 
+	}
+	
+	#box-filelist h4 {
+		font-weight: bold;
+		padding-bottom: 10px; 
+		border-bottom: 1px solid #222; 
+		margin-bottom: 10px; 
+	}
+	
+	#box-filelist span.filesize {
+		color: #777; 
+	}
+	
+	#box-filelist a.delete {
+		color: #ff5544; 
+	}
+	
+	#box-filelist a.download:hover, 
+	#box-filelist a.delete:hover {
+		color: #ee4433; 
+	}
+	
+	#box-filelist .entry {
+		padding: 4px 0; 
+	}
+	
+	#box-filelist .entry.hover {
+	}
+	
+	#box-filelist .entry.odd {
+		
+	}
+	
+	#box-filelist .entry.even {
+		color: #999; 
+	}
+	
+	

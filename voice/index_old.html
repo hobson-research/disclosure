@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>Voice Record Submit</title>
+	<meta name="description" content="">
+	<meta name="author" content="Jessen Hobson">
+	
+	<!-- CSS
+
+	* cssreset-min.css 				- CSS reset
+	* typegrid.css 					- Grid structure
+	* style.css 					- Page style
+	================================================== -->
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.8.0/build/cssreset/cssreset-min.css">
+	<link rel="stylesheet" type="text/css" href="css/typegrid.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<!-- Google Web Font: Lato 300, 300 italic, 400, 400 italic, 700, 700 italic -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
+
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js'></script>
+	<script type="text/javascript" src="js/swfobject.js"></script>
+	<script type="text/javascript" src="js/recorder.js"></script>
+
+	<script type="text/javascript">
+	$(function() {
+		var gain = 100;
+		var silenceLevel = 0;
+
+		var appWidth = 24;
+		var appHeight = 24;
+		var flashvars = {'event_handler': 'microphone_recorder_events', 'upload_image': 'images/upload.png'};
+		var params = {};
+		var attributes = {'id': "recorderApp", 'name':  "recorderApp"};
+		swfobject.embedSWF("recorder.swf", "flashcontent", appWidth, appHeight, "11.0.0", "", flashvars, params, attributes);
+	});
+
+	function configureMicrophone() {
+		if(! Recorder.isReady) {
+			return;
+		}
+
+		// Recorder.configure($('#rate').val(), $('#gain').val(), $('#silenceLevel').val(), $('#silenceTimeout').val());
+		Recorder.configure(22, 100, 0, 2000);
+		Recorder.setUseEchoSuppression(0);
+		Recorder.setLoopBack(0);
+	}
+	</script>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="desktop-12 columns">
+			<h1><img src="images/icon_microphone.png" alt="" /></h1>
+		</div><!-- // .desktop-12 -->
+	</div><!-- // .container -->
+
+	<div class="container">
+		<div class="desktop-12 columns">
+			<p class="intro">In the next page, you may be asked to allow the flash player and browser to access the microphone. Click "Allow" and be sure to have a microphone-enabled device. Once you submit the recorded file, you will receive a confirmation number to input in the survey. Please contact <a href="mailto:jlhobson@illinois.edu">jlhobson@illinois.edu</a> for questions or comments.</p><!-- // p.intro -->
+
+			<p class="button-wrapper">
+				<a href="record.php" class="button">Get Ready to Record</a>
+			</p><!-- // .button-wrapper -->
+		</div><!-- // .desktop-12 -->
+	</div><!-- // .container -->
+
+
+	<div class="container">
+		<div class="desktop-12 columns">
+			<p><strong>Upload requires php, i.e. example will not work on github.com</strong></p>
+		</div><!-- // .desktop-12 -->
+	</div><!-- // .container -->
+
+	
+	
+
+	<div id="status">
+	 Recorder Status...
+	</div>
+
+	<div id="control_panel">
+	<a id="record_button" onclick="Recorder.record('audio', 'audio.wav');" href="javascript:void(0);" title="Record"><img src="images/record.png" width="24" height="24" alt="Record"/></a>
+	<a id="play_button" style="display:none;" onclick="Recorder.playBack('audio');" href="javascript:void(0);" title="Play"><img src="images/play.png" width="24" height="24" alt="Play"/></a>
+	</div>
+	
+	<span id="save_button">
+		<span id="flashcontent">
+			<p>Your browser must have JavaScript enabled and the Adobe Flash Player installed.</p>
+		</span>
+	</span>
+
+	<div>Duration: <span id="duration"></span></div>
+	<div>Activity Level: <span id="activity_level"></span></div>
+	<div>Upload status: <span id="upload_status"></span></div>
+
+	<form id="uploadForm" name="uploadForm" action="upload.php">
+		<input name="authenticity_token" value="xxxxx" type="hidden">
+		<input name="upload_file[parent_id]" value="1" type="hidden">
+		<input name="format" value="json" type="hidden">
+	</form>
+
+
+</body>
+</html>

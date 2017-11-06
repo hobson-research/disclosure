@@ -1,0 +1,436 @@
+/*--------------------------------------------------------------------------
+	1. Body
+--------------------------------------------------------------------------*/
+
+html {
+	background: #000; 
+}
+
+
+body {
+	color: #fff;
+	background: #000;
+	font-size: 18px;
+	line-height: 36px;
+	font-family: 'Lato', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400; 
+	-webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		font-size: 13px;
+		line-height: 23px;
+	}
+}
+
+
+
+/*--------------------------------------------------------------------------
+	2. Typography
+--------------------------------------------------------------------------*/
+
+/* Links */
+a {
+	color: #1199ff;
+	text-decoration: none;
+	outline: 0;
+}
+
+a:hover,
+a:focus {
+	color: #ff3e2a;
+}
+/* Visibility */
+.hide {
+	display: none !important;
+}
+/* Highlighted Text */
+::selection {
+	background: #222;
+	color: #1199ff;
+	text-shadow: none;
+}
+/* Firefox */
+::-moz-selection {
+	background: #222;
+	color: #1199ff;
+	text-shadow: none;
+}
+
+em,
+.italic {
+	font-style: italic;
+}
+
+strong,
+.bold {
+	font-weight: bold;
+}
+/* Colors */
+.font-color-primary {
+	color: #1199ff;
+}
+
+.font-color-secondary {
+	color: #ff3e2a;
+}
+
+.background-color-primary {
+	background: #1199ff;
+}
+
+.font-color-white {
+	color: #fff;
+}
+
+.background-color-white {
+	background: #fff;
+}
+
+.font-color-gray {
+	color: #999;
+}
+
+
+/*--------------------------------------------------------------------------
+	3. Page Sections
+--------------------------------------------------------------------------*/
+
+h1 {
+	font-weight: bold;
+	text-align: center;
+	margin: 70px 0 50px 0; 
+}
+
+h3 {
+	font-weight: bold; 
+	margin-bottom: 20px; 
+}
+
+p.intro {
+	color: #fff;
+	margin-top: 20px; 
+	margin-bottom: 20px;
+}
+
+p.button-wrapper {
+	text-align: center; 
+}
+
+a.button {
+	display: inline-block;
+	font-weight: normal; 
+	color: #fff;
+	background: #1199ff;
+	padding: 27px 60px 25px 60px;
+	border: none; 
+	border-bottom: 5px solid #0179df;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; /* future proofing */
+	-khtml-border-radius: 5px; /* for old Konqueror browsers */
+}
+
+a.button.red {
+	background: #ff5544;
+	border-color: #cc3322;
+}
+
+	a.button.red:hover {
+		background-color: #dd4433;
+	}
+	
+
+a.button.small {
+	font-size: 13px;
+	line-height: 23px;
+	padding: 15px 25px 12px 25px;
+	border-bottom-width: 3px;
+	margin-right: 20px; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; /* future proofing */
+	-khtml-border-radius: 3px; /* for old Konqueror browsers */
+}
+
+	a.button:hover {
+		background-color: #0179df;
+	}
+
+	a.button.full {
+		text-align: center; 
+		display: block; 
+	}
+
+span.underline {
+	display: inline-block;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #fff; 
+}
+
+
+
+	/*--------------------------------------------------------------------
+		3.1. Main Page
+	--------------------------------------------------------------------*/
+
+	form#id-wrapper {
+
+	}
+
+		form#id-wrapper label {
+			color: #fff; 
+			font-size: 15px; 
+			line-height: 24px; 
+			margin: 60px 0 20px 0; 
+			display: block; 
+		}
+
+		form#id-wrapper input[type=text] {
+			color: #fff; 
+			background: #000; 
+			font-size: 26px; 
+			line-height: 35px; 
+			padding: 20px 30px; 
+			border: 1px solid #999; 
+			width: 100%; 
+			outline: none; 
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+		}
+
+			form#id-wrapper input[type=text]:focus {
+				color: #1199ff; 
+				border-color: #1199ff;
+			}
+
+
+
+		form#id-wrapper input[type=submit] {
+			display: block;
+			font-weight: normal; 
+			color: #fff;
+			background: #1199ff;
+			width: 100%; 
+			padding: 25px 30px; 
+			cursor: pointer; 
+			border: none; 
+			border-bottom: 5px solid #0179df;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px; /* future proofing */
+			-khtml-border-radius: 5px; /* for old Konqueror browsers */
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+		}
+
+			form#id-wrapper input[type=submit]:hover {
+				background: #0179df;
+			}
+
+
+
+	/*--------------------------------------------------------------------
+		3.1. Main Page
+	--------------------------------------------------------------------*/
+
+	form#confirmation-wrapper {
+		display: none;
+		padding-top: 20px; 
+	}
+
+		form#confirmation-wrapper.show {
+			display: block; 
+		}
+		
+		form#confirmation-wrapper label {
+			display: block;
+			color: #aaa; 
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: bold; 
+		}
+
+		input#confirmation {
+			font-size: 18px; 
+			line-height: 27px;  
+			font-weight: 300; 
+			color: #1199ff; 
+			background: #000; 
+			padding-bottom: 10px; 
+			border: none;
+			border-bottom: 1px solid #333;  
+			width: 100%;  
+		}
+
+
+
+	/*--------------------------------------------------------------------
+		3.2. Recording Page
+	--------------------------------------------------------------------*/
+
+	span.label {
+		display: inline-block; 
+		font-size: 14px;
+		line-height: 23px;
+		border-bottom: 1px solid #eee; 
+	}
+
+	#box-review {
+		margin-bottom: 70px; 
+	}
+
+		#box-review h3 {
+
+		}
+
+		#box-review p.intro {
+			margin-top: 0; 
+			margin-bottom: 20px; 
+		}
+
+		#box-review p.review {
+			color: #666;
+			font-size: 16px; 
+			line-height: 30px;
+			padding: 20px 30px; 
+			background: #f9f9f9; 
+			border: 5px solid #ddd;
+		}
+
+
+
+
+	form#new-entry textarea {
+		font-size: 16px; 
+		line-height: 30px;
+		width: 100%;
+		padding: 20px 30px; 
+		margin-bottom: 20px; 
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box; /* Firefox, other Gecko */
+		box-sizing: border-box; /* Opera/IE 8+ */
+		background: #fff; 
+		border: 5px solid #ddd;
+		outline: none; 
+	}
+
+		form#new-entry textarea:focus,
+		form#new-entry textarea:hover {
+			border-color: #1199ff;
+		}
+
+		form#new-entry textarea.readonly  {
+			color: #fff; 
+			background: #111; 
+			padding: 28px 38px; 
+			border: 1px solid #222;
+		}
+
+			form#new-entry textarea.readonly:focus,
+			form#new-entry textarea.readonly:hover {
+				border-color: #444;
+			}
+
+
+	form#new-entry input[type=submit],
+	form#new-entry a#submit-back {
+		text-align: center; 
+		display: block;
+		color: #fff;
+		width: 100%; 
+		margin-bottom: 20px; 
+		padding: 25px 30px; 
+		cursor: pointer; 
+		border: none; 
+		border-bottom: 5px solid #0179df;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px; /* future proofing */
+		-khtml-border-radius: 5px; /* for old Konqueror browsers */
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box; /* Firefox, other Gecko */
+		box-sizing: border-box; /* Opera/IE 8+ */
+	}
+
+	/* Manually adjust padding for the submt button */
+	form#new-entry input[type=submit] {
+		background: #1199ff;
+		padding: 32px 30px; 
+	}
+
+	form#new-entry a#submit-back {
+		background: #333; 
+		border-bottom: 5px solid #222;
+	}
+
+		form#new-entry input[type=submit]:hover,
+		form#new-entry a#submit-back:hover {
+			background: #0179df; 
+			border-bottom-color: #1199ff; 
+		}
+
+
+	#box-record {
+		
+	}
+
+		#box-review h3,
+		#box-record h3 {
+			font-size: 16px; 
+			line-height: 25px; 
+			color: #1199ff; 
+			border-top: 1px solid #1199ff; 
+			padding-top: 15px; 
+		}
+
+	/* Preview mode */
+	.show-on-preview {
+
+	}
+
+	p#submitResult {
+		display: none; 
+	}
+
+
+	/* Recording Information */
+
+	#recording-info {
+		color: #fff; 
+		font-size: 20px;
+		line-height: 32px; 
+		margin: 30px 0 0 0; 
+	}
+
+		#recording-info span.label {
+			color: #555; 
+			border-color: #555;
+			margin-bottom: 10px; 
+		}
+
+		#activity_level {
+			display: none; 
+		}
+
+
+	#nav {
+		margin: 100px 0; 
+	}
+
+
+
+
+/*--------------------------------------------------------------------------
+	5. File List
+--------------------------------------------------------------------------*/
+
+::-webkit-input-placeholder { color:#ddd; }
+::-moz-placeholder { color:#ddd; } /* firefox 19+ */
+:-ms-input-placeholder { color:#ddd; } /* ie */
+input:-moz-placeholder { color:#ddd; }
